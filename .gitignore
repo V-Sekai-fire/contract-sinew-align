@@ -1,0 +1,4 @@
+build*/
+__pycache__/
+lean/.lake/
+lean/Sinew/.lake/
