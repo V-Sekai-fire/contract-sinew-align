@@ -16,4 +16,4 @@ The script builds the C port and runs its unit test against the oracle in `Align
 
 ## Licence
 
-MIT, per the SPDX headers in the sources. There is no `LICENSE` file.
+MIT. See [LICENSE](LICENSE).
