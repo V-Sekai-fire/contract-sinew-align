@@ -13,8 +13,11 @@ abstract: >-
   path), Sinew/Math.lean (V3, M3, quatToMat) and AlignTest.lean (the
   oracle: a 120-degree rotation recovered at N=1, 2, 5). Anthropometry,
   RigRest, EmitShaders and the SlangCodegen directory come with the split
-  and are not built here. Local adaptations: none; this CITATION.cff is the
-  only added file. The C port that the drape links is vendor/sinew-align
+  and are not built here. Local adaptations: this CITATION.cff; Align.lean
+  and the V3/M3 part of Math.lean moved unchanged to
+  V-Sekai-fire/contract-rotation-star (RotationStar.Align, RotationStar.Vec),
+  which these modules now re-export; the toolchain moved from
+  v4.30.0-rc2 to v4.34.1 and plausible to the V-Sekai-fire fork's v4.34.0. The C port that the drape links is vendor/sinew-align
   (V-Sekai-fire/interactor-gyre), which cites this specification as its
   source. Rotations are row-major 3x3 matrices (AGENTS.md rule 11).
 authors:
