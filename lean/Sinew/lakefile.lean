@@ -8,8 +8,15 @@
 import Lake
 open Lake DSL
 
--- Property-based testing: Plausible (QuickCheck for Lean4), pinned to our toolchain.
-require plausible from git "https://github.com/leanprover-community/plausible" @ "v4.30.0-rc2"
+-- Property-based testing: Plausible (QuickCheck for Lean4), v4.34.0 of the V-Sekai-fire fork,
+-- the commit contract-rotation-star pins.
+require plausible from git
+  "https://github.com/V-Sekai-fire/plausible.git" @ "118aa17ee84656b8bd727fef7c458ee8c833385c"
+
+-- The rotation fitter's spec now lives in contract-rotation-star (RotationStar.Align, with the
+-- V3/M3 shapes of RotationStar.Vec); Sinew.Align and Sinew.Math re-export it.
+require RotationStar from git
+  "https://github.com/V-Sekai-fire/contract-rotation-star.git" @ "b70e19a627b3e6de19c4b52359406f771fae51c0" / "lean"
 
 package "SinewSolve" where
   version := v!"0.1.0"

@@ -4,7 +4,7 @@ The rotation fitter: its Lean specification and its C port, linked by the drape 
 
 ## Use
 
-The Lean library specifies the body-solve math, including vector alignment. The C port implements that alignment fit, and the `interactor-drape` and `interactor-headfit` guests link it.
+The Lean library specifies the body-solve math. Its vector alignment (`Sinew.Align`) re-exports `RotationStar.Align` from contract-rotation-star, the home of the workspace's rotation solver. The C port implements that alignment fit, and the `interactor-drape` and `interactor-headfit` guests link it.
 
 ## Build and run
 
